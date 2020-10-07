@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObOp6", "ObOp6\ObOp6.csproj", "{E1DEAA9B-2CB3-456A-8212-4DE0709D60B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOPLib", "FOPLib\FOPLib.csproj", "{3EF44650-ABFC-4E97-B5CF-C7AB73B1FEA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1DEAA9B-2CB3-456A-8212-4DE0709D60B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1DEAA9B-2CB3-456A-8212-4DE0709D60B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1DEAA9B-2CB3-456A-8212-4DE0709D60B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1DEAA9B-2CB3-456A-8212-4DE0709D60B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF44650-ABFC-4E97-B5CF-C7AB73B1FEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF44650-ABFC-4E97-B5CF-C7AB73B1FEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF44650-ABFC-4E97-B5CF-C7AB73B1FEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF44650-ABFC-4E97-B5CF-C7AB73B1FEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41255C52-D6BB-4E78-997B-38286310ED24}
+	EndGlobalSection
+EndGlobal
