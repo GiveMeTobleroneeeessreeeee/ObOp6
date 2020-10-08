@@ -4,9 +4,9 @@ namespace ObOp6
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Server.Start();
-        }
+        //static void Main(string[] args)
+        //{
+        //    Server.Start();
+        //}
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FOPLib;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,7 +26,32 @@ namespace ObOp6
                 while (!(s = reader.ReadLine()).Equals("Exit") || (s == null))
                 {
                     Console.WriteLine("From client ->" + s);
+                    string output;
 
+                    switch (s.ToLower())
+                    {
+                        case "hentalle":
+                            output = JsonConvert.SerializeObject(HentAlle());
+                            writer.Write(output);
+                            break;
+
+                        case "hent":
+                            string message = reader.ReadLine();
+                            int id = Convert.ToInt32(message);
+                            output = JsonConvert.SerializeObject(HentId(id));
+                            writer.Write(output);
+                            break;
+
+                        case "gem":
+                            string input = reader.ReadLine();
+                            FanOutPut fop = JsonConvert.DeserializeObject<FanOutPut>(input);
+                            Gem(fop);
+                            break;
+                    }     
+                         
+                         
+                       
+                        
 
                     writer.WriteLine("From server ->" + s);
                     writer.Flush();
@@ -93,23 +119,27 @@ namespace ObOp6
             new FanOutPut(7, 76.99, 19.2, "Klasseværelse 003")
         };
 
+        public void DoClient(TcpClient connectionSocket)
+        {
+            Stream ns = connectionSocket.GetStream();
+            StreamReader sr = new StreamReader(ns);
+            StreamWriter sw = new StreamWriter(ns);
+            sw.AutoFlush = true;
+        }
 
-        public List<FanOutPut> HentAlle()
+        public static List<FanOutPut> HentAlle()
         {
             return fanOutPuts;
 
         }
 
-        public void HentId(int id)
+        public static FanOutPut HentId(int id)
         {
-            FanOutPut fop = new FanOutPut(id, 50, 20, "tempobj");
-            
-            
-
-
+ 
+            return HentAlle().Find(i =>i.Id==id);
         }
 
-        public void Gem(FanOutPut fop)
+        public static void Gem(FanOutPut fop)
         {
             fanOutPuts.Add(fop);
 
